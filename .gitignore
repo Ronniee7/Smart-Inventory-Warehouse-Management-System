@@ -1,0 +1,61 @@
+# StockPilot .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.local
+
+# Testing / coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+coverage/
+*.lcov
+
+# Tooling caches
+.ruff_cache/
+.mypy_cache/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+
+# Secrets
+*.pem
+*.key
+secrets/
