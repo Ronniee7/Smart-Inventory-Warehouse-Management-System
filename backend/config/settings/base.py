@@ -64,10 +64,16 @@ WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
 DATABASES = {
-    "default": env.db(
-        "DATABASE_URL",
-        default="postgres://stockpilot:stockpilot@localhost:5432/stockpilot",
-    )
+    "default": {
+        **env.db(
+            "DATABASE_URL",
+            default="postgres://stockpilot:stockpilot@localhost:5432/stockpilot",
+        ),
+        "CONN_MAX_AGE": env.int("DB_CONN_MAX_AGE", default=60),
+        "OPTIONS": {
+            "connect_timeout": env.int("DB_CONNECT_TIMEOUT", default=10),
+        },
+    }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
