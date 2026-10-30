@@ -45,7 +45,19 @@ StockPilot uses a modular monolith architecture. Business domains are split into
 
 ## Getting started
 
-Setup instructions will be added as the project is implemented. For now, the repository contains only the foundation structure.
+See `docs/development-setup.md` for backend and frontend setup instructions.
+
+## Frontend
+
+The frontend is a React + TypeScript application located in `frontend/`.
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The dev server runs on `http://localhost:5173` and connects to the backend via `VITE_API_BASE_URL`.
 
 ## License
 
