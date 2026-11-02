@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     "apps.core",
+    "apps.accounts",
+    "apps.organizations",
 ]
 
 MIDDLEWARE = [
@@ -92,6 +94,8 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "accounts.User"
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
